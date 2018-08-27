@@ -1,0 +1,89 @@
+{
+  "formatCodeOptions": {
+    "indentSize": 2,
+    "tabSize": 2
+  },
+  "compilerOptions": {
+    "outDir": "dist",
+    "module": "commonjs",
+    "target": "es2018",
+    "lib": [
+      "es6",
+      "dom",
+      "esnext"
+    ],
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "rootDir": "src",
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "noUnusedLocals": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@components": [
+        "renderer/components"
+      ],
+      "@containers": [
+        "renderer/containers"
+      ],
+      "@modules": [
+        "renderer/modules"
+      ],
+      "@stores": [
+        "renderer/stores"
+      ],
+      "@abstract": [
+        "renderer/abstract"
+      ],
+      "@repository": [
+        "renderer/repository"
+      ],
+      "@utils": [
+        "renderer/utils"
+      ],
+      "@application": [
+        "renderer/application"
+      ],
+      "@config": [
+        "renderer/config"
+      ],
+      "@events": [
+        "renderer/events"
+      ],
+      "@plugins": [
+        "renderer/plugins"
+      ],
+      "@share": [
+        "share"
+      ]
+    }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest"
+  ],
+  "ordered-imports": [
+    true,
+    {
+      "import-sources-order": "any",
+      "named-imports-order": "case-insensitive"
+    }
+  ]
+}
