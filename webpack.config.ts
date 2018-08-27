@@ -8,7 +8,7 @@ import { resolveApp } from './config/utils'
 const module: webpack.Configuration[] = [
     // main processのscript
     {
-        entry: resolveApp('src/main/App.ts'),
+        entry: resolveApp('src/main/app.ts'),
         target: 'electron-main',
         output: {
             path: resolveApp('dist'),
@@ -26,7 +26,7 @@ const module: webpack.Configuration[] = [
     {
         entry: {
             index: resolveApp('src/renderer/windows/main.tsx'),
-            preference: resolveApp('src/renderer/windows/preference.tsx'),
+            sub: resolveApp('src/renderer/windows/sub.tsx'),
         },
         target: 'electron-renderer',
         devtool: 'cheap-module-source-map',
@@ -46,16 +46,6 @@ const module: webpack.Configuration[] = [
             alias: commonConfig.alias,
         },
         node: commonConfig.nodepPolyfill,
-    },
-    // webviewに注入するscriptのbuild
-    {
-        entry: {
-            inject: resolveApp('src/unit/preload.ts'),
-        },
-        module: {
-            rules: [defaultRules.tsLoader],
-        },
-        externals: commonConfig.externals,
     },
 ]
 

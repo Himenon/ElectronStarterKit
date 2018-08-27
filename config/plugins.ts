@@ -24,9 +24,9 @@ export const plugins: webpack.Plugin[] = [
         filename: 'index.html',
     }),
     new HtmlWebpackPlugin({
-        chunks: ['preference'],
-        template: './src/assets/preference.html',
-        filename: 'preference.html',
+        chunks: ['sub'],
+        template: './src/assets/sub.html',
+        filename: 'sub.html',
     }),
     new MiniCssExtractPlugin({
         filename: 'stylesheets/[name].css',
